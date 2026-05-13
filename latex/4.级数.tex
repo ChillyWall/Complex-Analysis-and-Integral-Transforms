@@ -181,9 +181,12 @@ s(z) = f_1(z) + f_2(z) + \cdots + f_n(z) + \cdots
 
 \begin{enumerate}
 \item 对所有的正实数都收敛。由阿贝尔定理知：\textbf{级数在复平面内处处绝对收敛}。
-
 \item 对所有的正实数，除了 \(z=0\)
 之外都发散。此时，\textbf{级数在复平面内除了原点之外处处发散}。
+\item 同时存在使得级数发散和收敛的正实数。这时，幂级数
+\end{enumerate}
+\(\sum\limits _{n=0}^{\infty}c_nz^n\)
+的收敛范围是一个以原点为中心的圆域。
 
 \begin{tcolorbox}[title={Example},colback=red!5!white
 ,colframe=red!75!black
@@ -191,11 +194,8 @@ s(z) = f_1(z) + f_2(z) + \cdots + f_n(z) + \cdots
 ,coltitle=red!25!black, fonttitle=\bfseries,subtitle style={boxrule=0.4pt, colback=yellow!50!red!25!white}]
 对于 \(1+z+2^2z^2+\cdots+n^nz^n\) 这个级数，当
 \(z \ne 0\) 时，通项是\textbf{不趋于零}的，级数发散。
+
 \end{tcolorbox}
-\item 同时存在使得级数发散和收敛的正实数。这时，幂级数
-\(\sum\limits _{n=0}^{\infty}c_nz^n\)
-的收敛范围是一个以原点为中心的圆域。
-\end{enumerate}
 \paragraph{收敛半径的求法}
 \label{收敛半径的求法}
 \begin{enumerate}
@@ -206,11 +206,19 @@ s(z) = f_1(z) + f_2(z) + \cdots + f_n(z) + \cdots
     \text{如果} \lim_{n \to \infty} \left|\frac{c_{n+1}}{c_n}\right| = \lambda \ne 0, \quad \text{则收敛半径} R=\frac{1}{\lambda}.
 }
 \]
+\item 根植法
+\label{根植法}
+\[
+\boxed{
+    \text{如果} \lim_{n \to \infty} \sqrt[n]{|c_n|} = \lambda \ne 0, \quad \text{则收敛半径} R = \frac{1}{\lambda}.
+}
+\]
 
-\begin{tcolorbox}[title={注意 如果：},colback=red!5!white
+\begin{tcolorbox}[title={注意},colback=red!5!white
 ,colframe=red!75!black
 ,colbacktitle=yellow!50!red
 ,coltitle=red!25!black, fonttitle=\bfseries,subtitle style={boxrule=0.4pt, colback=yellow!50!red!25!white}]
+如果：
 \begin{enumerate}
 \item \(\lambda = 0\)，则级数 \(\sum\limits _{n=0}^{\infty}c_n z^n\) 在复平面内处处
 收敛，即 \(\boxed{R=\infty}\)。
@@ -219,14 +227,6 @@ s(z) = f_1(z) + f_2(z) + \cdots + f_n(z) + \cdots
 \end{enumerate}
 
 \end{tcolorbox}
-\item 根植法
-\label{根植法}
-\[
-\boxed{
-    \text{如果} \lim_{n \to \infty} \sqrt[n]{|c_n|} = \lambda \ne 0, \quad \text{则收敛半径} R = \frac{1}{\lambda}.
-}
-\]
-注意事项和比值法一致。
 \end{enumerate}
 \subsubsection{幂级数的运算和性质}
 \label{幂级数的运算和性质}
@@ -378,13 +378,14 @@ c_n = \frac{1}{n!} f^{(n)}z_0,\quad n=0,1,2,\cdots
 这种幂级数不仅包含正数次数的项，还包含负数次数的项。
 
 \[
-\sum _{n=\infty}^{n=\infty} c_n(z-z_0)^n = \sum _{n=1}^{\infty} c_{-n}(z-z_0)^{-n} + \sum _{n=0}^{\infty} c_{n}(z-z_0)^{n}
+\sum_{n=-\infty}^{+\infty} c_n(z-z_0)^n = \sum_{n=1}^{\infty}
+c_{-n}(z-z_0)^{-n} + \sum_{n=0}^{\infty} c_{n}(z-z_0)^{n}
 \]
 
 等号右边第一项是负幂项部分，是研究函数性质的主要部分，而第二项的正幂项部分是解析部分。
 
-对于 \(\sum\limits _{n=1}^{\infty} c_{-n}(z-z_0)^{-n}\)，令
-\(\zeta = (z-z_0)^{-1}\) 使其变为 \(\sum\limits /{n=1}^{\infty} c/{-n}\)
+对于 \(\sum\limits_{n=1}^{\infty} c_{-n}(z-z_0)^{-n}\)，令
+\(\zeta = (z-z_0)^{-1}\) 使其变为 \(\sum\limits_{n=1}^{\infty} c_{-n} \zeta^{n}\)
 它的收敛半径记为 \(R\)，令 \(|\zeta| < R\) ，这时候收敛，记收敛域为
 \(|z-z_0| > \dfrac{1}{R} = R_1\)。
 
