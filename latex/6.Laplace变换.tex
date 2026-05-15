@@ -100,7 +100,7 @@ F(s)=\int_{0}^{+\infty}f(t)e^{-st}dt
 ,coltitle=red!25!black, fonttitle=\bfseries,subtitle style={boxrule=0.4pt, colback=yellow!50!red!25!white}]
 \(\delta(t)\) 的性质
 \begin{align*}
-\int_{-\infty}^{+\infty} \delta(t) \,\mathrm{d}t = 1. \quad \int _{-\infty}^{+\infty} \delta(t)f(t) \mathrm{d}t &= f(0) \\
+\int_{-\infty}^{+\infty} \delta(t) \,\mathrm{d}t = 1. \quad \int_{-\infty}^{+\infty} \delta(t)f(t) \mathrm{d}t &= f(0) \\
 \int_{-\infty}^{+\infty} \delta(t-t_0)f(t) \,\mathrm{d}t &= f(t_0) \\
 \mathcal{L}[\delta(t)] = \int_{0^{-}}^{+\infty}\delta(t)e^{-st} \,\mathrm{d}t = \int _{-\infty}^{+\infty} \delta(t)e^{-st} \,\mathrm{d}t &= 1 \\
 \mathcal{L}[\delta(t)] &= 1.
@@ -224,18 +224,15 @@ f(t)=\frac{1}{2\pi j} \int _{\beta - j\omega}^{\beta + j\omega} F(s)e^{st}\,\mat
 两个函数的卷积是指
 
 \[
-f_{1}(t) * f_{2}(t) = \int_{-\infty}^{+\infty} f_{1}(\tau) f_{2}(t-\tau)  \mathrm{d} \tau
+f_{1}(t) * f_{2}(t) = \int_{-\infty}^{+\infty} f_{1}(\tau) f_{2}(t-\tau) \mathrm{d} \tau
 \]
 
 如果 \(f_{1}(t)\) 与 \(f_{2}(t)\) 都满足条件：当 \(t < 0\) 时，\(f_{1}(t) = f_{2}(t) = 0\) ，则上式可以写成：
 
 \begin{align*}
-f_{1}(t) * f_{2}(t) &= \int_{-\infty}^{0} f_{1}(\tau) f_{2}(t-\tau) \,\mathrm{d} \tau
-\\
-&\qquad +\int_{0}^{t} f_{1}(\tau) f_{2}(t-\tau)  \mathrm{d} \tau
-\\
-&\qquad + \int_{t}^{+\infty} f_{1}(\tau) f_{2}(t-\tau) \,\mathrm{d} \tau
-\\
+f_{1}(t) * f_{2}(t) &= \int_{-\infty}^{0} f_{1}(\tau) f_{2}(t-\tau) \,\mathrm{d} +
+\tau +\int_{0}^{t} f_{1}(\tau) f_{2}(t-\tau)  \mathrm{d} \tau +
+\int_{t}^{+\infty} f_{1}(\tau) f_{2}(t-\tau) \,\mathrm{d} \tau \\
 &= \int_{0}^{t} f_{1}(\tau) f_{2}(t-\tau) \,\mathrm{d} \tau .
 \end{align*}
 \subsubsection{卷积性质}

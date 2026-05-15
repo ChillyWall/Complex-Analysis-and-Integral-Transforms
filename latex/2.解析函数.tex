@@ -112,6 +112,16 @@ f^{\prime}(z_{0})=\left.\dfrac{dw}{dz}\right|_{z=z_{0}}=\lim_{\Delta{z} \to 0} \
 \end{aligned}
 \end{equation*}
 
+\begin{tcolorbox}[title={解释},colback=red!5!white
+,colframe=red!75!black
+,colbacktitle=yellow!50!red
+,coltitle=red!25!black, fonttitle=\bfseries,subtitle style={boxrule=0.4pt, colback=yellow!50!red!25!white}]
+若函数 \(f(z)\) 在一点 \(z_{0}\) 可导，则其在各个方向上的导数均存在且相等，则其
+在水平和竖直方向上的导数相等。分别从这两个方向趋紧 \(z_{0}\) 求导数，并建立等式，
+即可得到柯西黎曼方程。
+
+\end{tcolorbox}
+
 \begin{tcolorbox}[title={Note},colback=red!5!white
 ,colframe=red!75!black
 ,colbacktitle=yellow!50!red
@@ -158,7 +168,7 @@ f^{\prime}(z_{0})=\left.\dfrac{dw}{dz}\right|_{z=z_{0}}=\lim_{\Delta{z} \to 0} \
 
 但是，如果 \(u\) 是 \(v\) 的函数或者反之，这个解析函数也\textbf{只能是常函数}：
 
-不妨假设 \(u=F(v)\)。那么
+不妨假设 \(v=F(u)\)。那么
 
 $$
 \frac{\partial v}{\partial x}=F'(u)\frac{\partial u}{\partial x},\quad \frac{\partial v}{\partial y}=F'(u)\frac{\partial u}{\partial y}
@@ -269,7 +279,7 @@ w=\operatorname{Ln}z=\ln |z|+i\operatorname{Arg}z
 \textbf{不再成立}，将 \(\operatorname{Ln}\) 换为 \(\ln\) \textbf{也不成立}。
 \item \(n\operatorname{Ln}z=\overbrace{\operatorname{Ln}z+\cdots+\operatorname{Ln}z}^{n 个}\)
 也不再成立。这个很有迷惑性，你可以认为 \(\operatorname{Ln}\)
-函数返回一个包含所有值的集合，因此=operator+=、=operator==被\textbf{重载}为集合的闵可夫斯基加法、集合的相等。
+函数返回一个包含所有值的集合，因此\texttt{operator+}、\texttt{operator=}被\textbf{重载}为集合的闵可夫斯基加法、集合的相等。
 \end{enumerate}
 
 \begin{tcolorbox}[title={Note},colback=red!5!white
@@ -286,8 +296,7 @@ w=\operatorname{Ln}z=\ln |z|+i\operatorname{Arg}z
 
 \end{tcolorbox}
 
-\textbf{连续性}：
-在\textbf{除去了负实轴和原点之后的复平面}内，主值\textbf{分支}和其他各\textbf{分支}处处连续，处处可导。并且
+\textbf{连续性}：在\textbf{除去了负实轴和原点之后的复平面}内，主值\textbf{分支}和其他各\textbf{分支}处处连续，处处可导。并且
 
 \[
 (\ln z)'=\frac{1}{z},\quad (\operatorname{Ln}z)'=\frac{1}{z}

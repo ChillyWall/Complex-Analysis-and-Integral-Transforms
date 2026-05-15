@@ -104,7 +104,7 @@ s_n = \alpha_1 + \alpha_2 + \cdots + \alpha_n
 
 \end{tcolorbox}
 
-\textbf{定义}：如果 \(\sum\limits_{n=1}^{\infty}|\alpha_{n}|\) 收敛，那末称级数
+\textbf{定义}：如果 \(\sum\limits_{n=1}^{\infty}|\alpha_{n}|\) 收敛，那么称级数
 \(\sum\limits_{n=1}^{\infty}\alpha_{n}\) 为\textbf{绝对收敛}。
 
 非绝对收敛的收敛级数称为\textbf{条件收敛级数}。
@@ -146,7 +146,7 @@ s_{n}(z)=f_{1}(z)+f_{2}(z)+\cdots +f_{n}(z)
 \(\sum\limits_{n=1}^{\infty} f_n(z)\) 在 \(z_0\) 收敛。其和记为
 \(S(z_0)\)。
 
-如果级数在 \(D\) 内处处收敛，那末它的和一定是 \(z\) 的一个函数
+如果级数在 \(D\) 内处处收敛，那么它的和一定是 \(z\) 的一个函数
 \(s(z)\)：
 
 \[
@@ -181,12 +181,11 @@ s(z) = f_1(z) + f_2(z) + \cdots + f_n(z) + \cdots
 
 \begin{enumerate}
 \item 对所有的正实数都收敛。由阿贝尔定理知：\textbf{级数在复平面内处处绝对收敛}。
-\item 对所有的正实数，除了 \(z=0\)
-之外都发散。此时，\textbf{级数在复平面内除了原点之外处处发散}。
+\item 对所有的正实数，除了 \(z=0\) 之外都发散。此时，\textbf{级数在复平面内除了原点之外处处
+发散}。
 \item 同时存在使得级数发散和收敛的正实数。这时，幂级数
+\(\sum\limits_{n=0}^{\infty}c_nz^n\) 的收敛范围是一个以原点为中心的圆域。
 \end{enumerate}
-\(\sum\limits _{n=0}^{\infty}c_nz^n\)
-的收敛范围是一个以原点为中心的圆域。
 
 \begin{tcolorbox}[title={Example},colback=red!5!white
 ,colframe=red!75!black
@@ -198,15 +197,14 @@ s(z) = f_1(z) + f_2(z) + \cdots + f_n(z) + \cdots
 \end{tcolorbox}
 \paragraph{收敛半径的求法}
 \label{收敛半径的求法}
-\begin{enumerate}
-\item 比值法
+\subparagraph{比值法}
 \label{比值法}
 \[
 \boxed{
     \text{如果} \lim_{n \to \infty} \left|\frac{c_{n+1}}{c_n}\right| = \lambda \ne 0, \quad \text{则收敛半径} R=\frac{1}{\lambda}.
 }
 \]
-\item 根植法
+\subparagraph{根植法}
 \label{根植法}
 \[
 \boxed{
@@ -227,7 +225,6 @@ s(z) = f_1(z) + f_2(z) + \cdots + f_n(z) + \cdots
 \end{enumerate}
 
 \end{tcolorbox}
-\end{enumerate}
 \subsubsection{幂级数的运算和性质}
 \label{幂级数的运算和性质}
 \paragraph{有理运算}
@@ -240,13 +237,13 @@ f(z)=\sum_{n=0}^{\infty} a_{n}z^{n},\quad R=r_{1},\qquad g(z)=\sum_{n=0}^{\infty
 则有：
 
 \begin{align*}
-    f(z)\pm g(z)&=\sum_{n=0}^{\infty} a_{n}z^{n}\pm\sum_{n=0}^{\infty} b_{n}z^{n}\\
-    &=\sum_{n=0}^{\infty}(a_{n}\pm b_{n})z^{n}.\\
-    & (R=\min(r_{1},r_{2}), \quad |z| < R)\\
-    \\
-    f(z)\cdot g(z)&=\left(\sum_{n=0}^{\infty} a_{n}z^{n}\right)\cdot\left(\sum_{n=0}^{\infty} b_{n}z^{n}\right)\\
-    &=\sum_{n=0}^{\infty}\left(a_{n}b_{0}+a_{n-1}b_{1}+\cdots+a_{0} b_{n}\right)z^{n}.\\
-    & (R=\min(r_{1},r_{2}), \quad |z| < R)
+f(z)\pm g(z) &=\sum_{n=0}^{\infty} a_{n}z^{n}\pm\sum_{n=0}^{\infty} b_{n}z^{n}\\
+&= \sum_{n=0}^{\infty}(a_{n}\pm b_{n})z^{n}.\\
+& (R=\min(r_{1},r_{2}), \quad |z| < R)\\
+\\
+f(z)\cdot g(z) &=\left(\sum_{n=0}^{\infty} a_{n}z^{n}\right)\cdot\left(\sum_{n=0}^{\infty} b_{n}z^{n}\right)\\
+& =\sum_{n=0}^{\infty}\left(a_{n}b_{0}+a_{n-1}b_{1}+\cdots+a_{0} b_{n}\right)z^{n}.\\
+& (R=\min(r_{1},r_{2}), \quad |z| < R)
 \end{align*}
 \paragraph{代换（复合）运算}
 \label{代换复合运算}
@@ -288,7 +285,7 @@ f(z)=\sum_{n=0}^{\infty} a_{n}z^{n},\quad R=r_{1},\qquad g(z)=\sum_{n=0}^{\infty
 ,colframe=red!75!black
 ,colbacktitle=yellow!50!red
 ,coltitle=red!25!black, fonttitle=\bfseries,subtitle style={boxrule=0.4pt, colback=yellow!50!red!25!white}]
-简而言之，在收敛圆内，幂函数的*和函数解析*；幂函数可以*逐项求导*或者*逐项积分*。
+简而言之，在收敛圆内，幂函数的\textbf{和函数解析}；幂函数可以\textbf{逐项求导}或者\textbf{逐项积分}。
 
 \end{tcolorbox}
 \subsection{泰勒级数}
@@ -297,9 +294,8 @@ f(z)=\sum_{n=0}^{\infty} a_{n}z^{n},\quad R=r_{1},\qquad g(z)=\sum_{n=0}^{\infty
 \label{泰勒定理}
 设 \(f(z)\) 在区域 \(D\) 内解析，\(z_0\) 为 \(D\)内的一点，\(d\) 为
 \(z_0\) 到 \(D\) 的边界上各点的最短距离，则当 \(|z-z_0| < d\) 时，有
-\(f(z)=\sum\limits-{n=0}^{\infty}c_n(z-z_0)^n\)成立。
-
-其中，\(c_n = \dfrac{1}{n!}f^{(n)}(z_0),\quad n = 0,1,2,\cdots\)
+\(f(z)=\sum\limits_{n=0}^{\infty} c_n (z-z_0)^n\)成立。其中，
+\(c_n = \dfrac{1}{n!}f^{(n)}(z_0),\quad n = 0,1,2,\cdots\)
 
 \begin{tcolorbox}[title={说明},colback=red!5!white
 ,colframe=red!75!black
@@ -310,7 +306,7 @@ f(z)=\sum_{n=0}^{\infty} a_{n}z^{n},\quad R=r_{1},\qquad g(z)=\sum_{n=0}^{\infty
 \begin{quote}
 复解析是一个很强的条件，它的效果要比实函数的无限阶可导还要强。因此对于实函数我们要考虑余项的极限是否为零，但是对于复变函数，只要复解析，就可以展开。
 \end{quote}
-\item 如果 \(f(z)\) 在 \(D\) 内有奇点，则 \(d\) 等于 \(z\)。到最近一个奇点 \(\alpha\) 之间的距离，即 \(d = |\alpha - z_0|\)。
+\item 如果 \(f(z)\) 在 \(D\) 内有奇点，则 \(d\) 等于 \(z_{0}\) 到最近一个奇点 \(\alpha\) 之间的距离，即 \(d = |\alpha - z_0|\)。
 \item 当 \(z_0 = 0\) 时，级数称为麦克劳林级数。
 \item 任何解析函数在一点的泰勒级数是唯一的。
 \end{enumerate}

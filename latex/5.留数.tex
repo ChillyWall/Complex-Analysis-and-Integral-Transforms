@@ -43,10 +43,7 @@ c_{0}, & z=z_{0}
 ,coltitle=red!25!black, fonttitle=\bfseries,subtitle style={boxrule=0.4pt, colback=yellow!50!red!25!white}]
 \begin{enumerate}
 \item \textbf{由定义判断}：\\
-如果 \(f(z)\) 在 \(z_{0}\) 的洛朗级数无负幂项则 \(z_{0}\) 为 \(f(z)\)
-\end{enumerate}
-的可去奇点。
-\begin{enumerate}
+如果 \(f(z)\) 在 \(z_{0}\) 的洛朗级数无负幂项则 \(z_{0}\) 为 \(f(z)\) 的可去奇点。
 \item \textbf{判断极限} \(\lim_{z\to z_{0}}f(z)\)：\\
 若极限存在且为有限值，则 \(z_{0}\) 为 \(f(z)\) 的可去奇点。
 \end{enumerate}
@@ -54,8 +51,7 @@ c_{0}, & z=z_{0}
 \end{tcolorbox}
 \paragraph{极点}
 \label{极点}
-\begin{enumerate}
-\item 极点定义：
+\subparagraph{极点定义：}
 \label{极点定义}
 如果洛朗级数中只有有限多个 \(z-z_{0}\) 的负幂项，其中关于
 \((z-z_{0})^{-1}\) 的最高幂为 \((z-z_{0})^{-m}\)，即
@@ -73,21 +69,20 @@ f(z)=\frac{1}{(z-z_{0})^{m}}g(z)
 ,colbacktitle=yellow!50!red
 ,coltitle=red!25!black, fonttitle=\bfseries,subtitle style={boxrule=0.4pt, colback=yellow!50!red!25!white}]
 \begin{enumerate}
-\item \[ g(z)=c_{-m}+c_{-m+1}(z-z_{0})+c_{-m+2}(z-z_{0})^{2}+\cdots \] \\
+\item \(g(z)=c_{-m}+c_{-m+1}(z-z_{0})+c_{-m+2}(z-z_{0})^{2}+\cdots\) \\
 特点：
 \begin{enumerate}
 \item 在 \(|z-z_{0}|<\delta\) 内是解析函数
 \item \(g(z_{0})\neq 0\)
 \end{enumerate}
 \item 如果 \(z_{0}\) 为函数 \(f(z)\) 的极点，则
+\[
+    \lim_{z\to z_{0}}f(z)=\infty.
+    \]
 \end{enumerate}
 
-\[
-\lim_{z\to z_{0}}f(z)=\infty.
-\]
-
 \end{tcolorbox}
-\item 极点判定方法
+\subparagraph{极点判定方法}
 \label{极点判定方法}
 \begin{enumerate}
 \item \textbf{由定义判别}
@@ -97,7 +92,6 @@ f(z)=\frac{1}{(z-z_{0})^{m}}g(z)
 \(f(z)=\dfrac{g(z)}{(z-z_{0})^{m}}\)，其中 \(g(z)\) 在 \(z_{0}\)
 的邻域内解析，且 \(g(z_{0})\neq 0\)。
 \item \textbf{利用极限} \(\lim\limits _{z\to z_{0}}f(z)=\infty\) 判断。
-\end{enumerate}
 \end{enumerate}
 \paragraph{本性奇点}
 \label{本性奇点}
@@ -227,12 +221,13 @@ e^{\frac{1}{z}}=\underbrace{1+z^{-1}+\frac{1}{2!}z^{-2}+\cdots+\frac{1}{n!}z^{-n
 \label{形如-int_02pircos-theta-sin-thetamathrmdtheta-的积分}
 思路：\(\boxed{\text{定积分}} \rightarrow \boxed{\text{复变函数沿着某条封闭路线的积分}}\)
 
-令 \(z=e^{i\theta}\)，则 \[
+令 \(z=e^{i\theta}\)，则
+\begin{align*}
 z=e^{i\theta} \longrightarrow \,\mathrm{d}z=ie^{i\theta}\,\mathrm{d}\theta \longrightarrow \,\mathrm{d}\theta=\frac{\,\mathrm{d}z}{iz},\\
-\sin \theta = \frac{1}{2i}(e^{i\theta}-e^{-i\theta})=\frac{z^2-1}{2iz},
-\\[1.5ex]
+\sin \theta = \frac{1}{2i}(e^{i\theta}-e^{-i\theta})=\frac{z^2-1}{2iz}, \\
 \cos \theta = \frac{1}{2}(e^{i\theta}+e^{-i\theta})=\frac{z^2+1}{2z}.
-\] 当 \(\theta\) 历经 \([0,2\pi]\)，\(z\) 沿着单位圆周
+\end{align*}
+当 \(\theta\) 历经 \([0,2\pi]\)，\(z\) 沿着单位圆周
 \(\left|z\right|=1\) 正方向绕行一周。
 
 
